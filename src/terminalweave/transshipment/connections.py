@@ -10,6 +10,7 @@ class ServiceCall:
     service: str
     arrival: datetime
     departure: datetime
+    destination: str | None = None
 
     def __post_init__(self) -> None:
         object.__setattr__(self, 'arrival', ensure_utc(self.arrival))

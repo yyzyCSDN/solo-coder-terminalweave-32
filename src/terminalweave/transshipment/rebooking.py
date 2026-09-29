@@ -12,6 +12,7 @@ class Sailing:
     departure: datetime
     capacity_teu: int
     booked_teu: int = 0
+    call_id: str | None = None
 
     def __post_init__(self):
         object.__setattr__(self, 'departure', ensure_utc(self.departure))
